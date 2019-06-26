@@ -1,0 +1,29 @@
+<h1>Contact</h1>
+
+<div class='row'>
+    <div class='col-sm-6'>
+            <form [formGroup]="userForm">
+                <div class='form-group'>
+                    <label for="name">Name</label>
+                    <input class='form-control'formControlName="name" id="name" />
+                    <!-- <small class='form-text text-mutted' *ngIf="userForm.controls[name].valid">Required</small> -->
+                </div>
+                  
+                    <label for="email">Email</label>
+                    <input formControlName="email" id="email" />
+                    <!-- <div [hidden]="email.valid">Invalid</div> -->
+                  
+                    <label for="profile">Profile Description</label>
+                    <input formControlName="email" id="profile" />
+                    <!-- <div [hidden]="profile.valid">Invalid</div> -->
+                  
+                    <button type="submit" [disabled]="!userForm.valid">Submit</button>
+                  </form>
+                  
+    </div>
+    <div class='col-sm-6'>
+        <agm-map [latitude]="lat" [longitude]="lng">
+            <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+        </agm-map>
+    </div>
+</div>
