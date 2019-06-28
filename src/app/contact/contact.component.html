@@ -1,45 +1,48 @@
-<h1 class="header">Contact</h1>
-
-<div class='row'>
-    <div class='col-sm-6'>
-        <form [formGroup]="userForm">
-            <div class='form-group'>
-                <label for="name">Name</label>
-                <input class='form-control' formControlName="name" id="name" placeholder="Enter your name" />
-                <small class='text-danger' *ngIf="userForm.controls['name'].invalid">Required</small>
-            </div>
-
-            <div class='form-group'>
-                <label for="email">Email</label>
-                <input class='form-control' formControlName="email" id="email" placeholder="Enter email" />
-                <small class='text-danger' *ngIf="userForm.controls['email'].invalid">Required</small>
-            </div>
-
-            <div class='form-group'>
-                <label for="message">Message</label>
-                <textarea class="form-control" formControlName="profile" id="message" placeholder="Write your message..." rows="3"></textarea>
-                <small class='text-danger' *ngIf="userForm.controls['profile'].invalid">Required</small>
-            </div>
-            <div class="form-group">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="gridCheck">
-                    <label class="form-check-label" for="gridCheck">
-                        I want to get a response
-                    </label>
+<div class='container my-4'>
+    <h1 class="header">Contact</h1>
+    <div class='row'>
+        <div class='col-sm-6'>
+            <form [formGroup]="userForm">
+                <div class='form-group'>
+                    <label for="name">Name</label>
+                    <input class='form-control' formControlName="name" id="name" placeholder="Enter your name" />
+                    <small class='text-danger' *ngIf="userForm.controls['name'].invalid">Required</small>
                 </div>
-            </div>
 
-            <button type="submit" class="btn btn-primary" [disabled]="!userForm.valid" (click)="sendMessage">Submit</button>
+                <div class='form-group'>
+                    <label for="email">Email</label>
+                    <input class='form-control' formControlName="email" id="email" placeholder="Enter email" />
+                    <small class='text-danger' *ngIf="userForm.controls['email'].invalid">Required</small>
+                </div>
 
-            <div *ngIf='msgSent' class="alert alert-success" role="alert">
-                Message sent successfully!
-            </div>
-        </form>
+                <div class='form-group'>
+                    <label for="message">Message</label>
+                    <textarea class="form-control" formControlName="profile" id="message"
+                        placeholder="Write your message..." rows="3"></textarea>
+                    <small class='text-danger' *ngIf="userForm.controls['profile'].invalid">Required</small>
+                </div>
+                <div class="form-group">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                        <label class="form-check-label" for="gridCheck">
+                            I want to get a response
+                        </label>
+                    </div>
+                </div>
 
+                <button type="submit" class="btn btn-primary" [disabled]="!userForm.valid"
+                    (click)="sendMessage">Submit</button>
+
+                <div *ngIf='msgSent' class="alert alert-success" role="alert">
+                    Message sent successfully!
+                </div>
+            </form>
+
+        </div>
+        <div class='col-sm-6'>
+            <agm-map [latitude]="lat" [longitude]="lng">
+                <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+            </agm-map>
+        </div>
     </div>
-    <div class='col-sm-6'>
-        <agm-map [latitude]="lat" [longitude]="lng">
-            <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
-        </agm-map>
-</div>
-</div>
+    </div>
