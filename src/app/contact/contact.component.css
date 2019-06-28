@@ -1,11 +1,21 @@
+
+.container {
+    padding-bottom: 0px;
+    height: calc(100vh - 59px);
+    overflow: hidden;
+}
 agm-map {
-    height: 300px;
-    width: 80%;
+    height: 280px;
+    width: 100%;
 }
 .header {
     margin-bottom: 0.8em;
+    color: #244F5F;
 }
 .btn {
-    margin-left: 40%;
-    margin-bottom:0px;
+    margin-left: 70%;
+    margin-top:-10%;
+}
+.contact {
+    padding-top: 15px;
 }

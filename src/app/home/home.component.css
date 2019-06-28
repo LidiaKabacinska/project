@@ -2,18 +2,23 @@
     background-image: url(backgroundpic.jpg);
     background-repeat: none;
     background-size: cover;
-    height: 100vh;
+    height: calc(100vh - 59px);
     width: 100%;
+    overflow: hidden;
     }
 
 .text {
-    margin-top: 25%;
+    margin-top: 20%;
     margin-left: 10%;
 }
 .header {
     font-weight: bold;
+    color:#244F5F;
 }
 .maxima {
-    margin-top: 2em;
+    margin-top: 1.3em;
     font-size: 1.2em;
+}
+.color {
+    color: #3B6474;
 }

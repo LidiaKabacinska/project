@@ -9,8 +9,8 @@ import { FormBuilder, Validators } from '@angular/forms';
 export class ContactComponent  {
   msgSent: boolean = false;
 
-  lat: number = 52.4078227;
-  lng: number = 16.9350791;
+  lat: number = 51.5232;
+  lng: number = -0.1578;
 
   userForm: any;
   

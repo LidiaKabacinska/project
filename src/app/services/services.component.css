@@ -1,3 +1,13 @@
 .header {
     margin-bottom: 1.5em;
+    color: #244F5F;
+}
+img {
+    max-width: 100px;
+    padding-left: 5px;
+    padding-right:5px;
+}
+p {
+    padding-top: 5%;
+    padding-bottom: 15%;;
 }

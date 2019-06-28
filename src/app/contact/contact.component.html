@@ -27,20 +27,24 @@
                         <label class="form-check-label" for="gridCheck">
                             I want to get a response
                         </label>
-                        <button type="submit" class="btn btn-primary" [disabled]="!userForm.valid"
-                    (click)="sendMessage">Submit</button>
+                        <button type="submit" [disabled]="!userForm.valid" (click)="sendMessage"
+                            class="btn btn-primary">Submit</button>
                     </div>
                 </div>
                 <div *ngIf='msgSent' class="alert alert-success" role="alert">
                     Message sent successfully!
                 </div>
             </form>
-
         </div>
         <div class='col-sm-6'>
             <agm-map [latitude]="lat" [longitude]="lng">
                 <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
             </agm-map>
+            <div>
+                <p class="contact">Baker Street 65<br>
+                    NW1 London, UK<br>
+                    +44 22 7353 9376</p>
+            </div>
         </div>
     </div>
-    </div>
+</div>
