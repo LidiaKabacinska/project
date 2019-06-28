@@ -3,5 +3,9 @@ agm-map {
     width: 80%;
 }
 .header {
-    margin-bottom: 1.2em;
+    margin-bottom: 0.8em;
+}
+.btn {
+    margin-left: 40%;
+    margin-bottom:0px;
 }
