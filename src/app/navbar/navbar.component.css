@@ -1,3 +1,16 @@
 .navbar {
     font-size: 1.1em;
 }
+.logo {
+    font-weight: bold;
+    color:#244F5F;
+    margin: auto;
+}
+.color {
+    color: #3B6474;
+}
+.contact a {
+    color: #244F5F;
+    font-size: 0.7em;
+    padding-left: 10px;
+}

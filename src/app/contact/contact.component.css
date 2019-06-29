@@ -16,6 +16,17 @@ agm-map {
     margin-left: 70%;
     margin-top:-10%;
 }
+.streetname {
+    margin-bottom:0;
+}
+.city {
+    margin-bottom: 6px;
+}
 .contact {
     padding-top: 15px;
+    font-size: 1em;
+}
+.contact a {
+    font-size: 0.8em;
+    color: #244F5F;
 }
