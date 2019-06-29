@@ -12,9 +12,10 @@ h1 {
     text-align: center;
     border-radius: 3px;
     margin-bottom: 20px;
-    max-height: 200px;
+    max-height: 180px;
 
 }
 .desc {
     text-align: left;
+    font-size: 0.9em;
 }

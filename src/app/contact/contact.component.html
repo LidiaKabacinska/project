@@ -1,49 +1,57 @@
 <div class='container my-4'>
     <h1 class="header">Contact</h1>
     <div class='row'>
-        <div class='col-sm-6 part'>
+        <div class='col-sm-6'>
             <form [formGroup]="userForm">
                 <div class='form-group'>
                     <label for="name">Name</label>
                     <input class='form-control' formControlName="name" id="name" placeholder="Enter your name" />
-                    <small class='text-danger' *ngIf="userForm.controls['name'].invalid">Required</small>
+                    <small class='text-danger'
+                        *ngIf="userForm.controls['name'].invalid && (userForm.controls['name'].dirty || userForm.controls['name'].touched)">Required</small>
                 </div>
 
                 <div class='form-group'>
                     <label for="email">Email</label>
                     <input class='form-control' formControlName="email" id="email" placeholder="Enter email" />
-                    <small class='text-danger' *ngIf="userForm.controls['email'].invalid">Required</small>
+                    <small class='text-danger'
+                        *ngIf="userForm.controls['email'].invalid && (userForm.controls['email'].dirty || userForm.controls['email'].touched)">Required</small>
                 </div>
 
                 <div class='form-group'>
                     <label for="message">Message</label>
-                    <textarea class="form-control" formControlName="profile" id="message"
+                    <textarea class="form-control" formControlName="profile" id="profile"
                         placeholder="Write your message..." rows="2"></textarea>
-                    <small class='text-danger' *ngIf="userForm.controls['profile'].invalid">Required</small>
+                    <small class='text-danger'
+                        *ngIf="userForm.controls['profile'].invalid && (userForm.controls['profile'].dirty || userForm.controls['profile'].touched)">Required</small>
                 </div>
-                <div class="form-group">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="gridCheck">
-                        <label class="form-check-label" for="gridCheck">
-                            I want to get a response
-                        </label>
-                        <button type="submit" [disabled]="!userForm.valid" (click)="sendMessage"
-                            class="btn btn-primary">Submit</button>
+
+                <div class="row">
+                    <div class="form-group col-sm-6">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <label class="form-check-label" for="gridCheck">
+                                I want to get a response
+                            </label>
+                        </div>
                     </div>
-                </div>
-                <div *ngIf='msgSent' class="alert alert-success" role="alert">
-                    Message sent successfully!
+
+                    <div class="col-sm-6">
+                        <button type="submit" [disabled]="!userForm.valid" (click)="sendMessage()"
+                            class="btn btn-primary col-sm-6">Submit</button>
+                    </div>
+                    <div *ngIf='msgSent' class="alert alert-success" role="alert">
+                        Message sent successfully!
+                    </div>
                 </div>
             </form>
         </div>
-        <div class='col-sm-6 part'>
+        <div class='col-sm-6'>
             <agm-map [latitude]="lat" [longitude]="lng">
                 <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
             </agm-map>
             <div>
                 <div class="contact">
-                    <p class="streetname">Baker Street 65</p>
-                    <p class="city">NW1 London, UK</p>
+                    <p class="city">Baker Street 65, NW1 London, UK</p>
                     <a href="mailto:nordent@contact.com">nordent@contact.com</a><br>
                     <a href="tel:+442273539376">+44 22 7353 9376</a>
                 </div>

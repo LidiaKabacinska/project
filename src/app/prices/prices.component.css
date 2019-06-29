@@ -1,6 +1,10 @@
 .header {
-    margin-bottom: 1.5em;
+    margin-top: 0.2em;
+    margin-bottom: 1.2em;
     color: #244F5F;
+}
+table {
+    font-size: 0.9em;
 }
 .thread {
     background-color:#ECECEC;

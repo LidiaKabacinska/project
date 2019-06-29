@@ -5,9 +5,6 @@
     margin-bottom: 0 !important;
     margin-top: 0 !important;
 }
-.part {
-    margin-bottom: 0 !important;
-}
 agm-map {
     height: 280px;
     width: 100%;
@@ -15,13 +12,6 @@ agm-map {
 .header {
     margin-bottom: 0.8em;
     color: #244F5F;
-}
-.btn {
-    margin-left: 70%;
-    margin-top:-10%;
-}
-.streetname {
-    margin-bottom:0;
 }
 .city {
     margin-bottom: 6px;
