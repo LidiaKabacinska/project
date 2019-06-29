@@ -1,8 +1,12 @@
 
 .container {
-    padding-bottom: 0px;
     height: calc(100vh - 59px);
     overflow: hidden;
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+}
+.part {
+    margin-bottom: 0 !important;
 }
 agm-map {
     height: 280px;

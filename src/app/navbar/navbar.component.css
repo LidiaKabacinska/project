@@ -5,9 +5,13 @@
     font-weight: bold;
     color:#244F5F;
     margin: auto;
+    padding-left: 10%;
 }
 .color {
     color: #3B6474;
+}
+.contact {
+    padding-right: 3%;
 }
 .contact a {
     color: #244F5F;
